@@ -9,7 +9,7 @@ using ProductSaling.Data.Entities;
 
 namespace ProductSaling.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -44,7 +44,7 @@ namespace ProductSaling.API.Controllers
             return Ok(result);
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -64,7 +64,7 @@ namespace ProductSaling.API.Controllers
             return CreatedAtRoute("GetProduct", new { id = product.ProductId }, product);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -92,7 +92,7 @@ namespace ProductSaling.API.Controllers
 
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
