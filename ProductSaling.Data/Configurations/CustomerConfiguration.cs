@@ -16,15 +16,24 @@ namespace ProductSaling.Data.Configurations
             builder.HasData(
                 new()
                 {
-
+                    CustomerId = 1,
+                    CompanyName = "Konuşarak Öğren",
+                    City ="İstanbul",
+                    ContactName = "05055050505"
                 },
                 new()
                 {
-
+                    CustomerId = 2,
+                    CompanyName = "HepsiBurada",
+                    City = "İstanbul",
+                    ContactName = "05495499494"
                 },
                 new()
                 {
-
+                    CustomerId = 3,
+                    CompanyName = "Trendyol",
+                    City = "İstanbul",
+                    ContactName = "05325323232"
                 }
             );
         }

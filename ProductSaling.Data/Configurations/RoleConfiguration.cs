@@ -8,7 +8,18 @@ namespace ProductSaling.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<IdentityRole> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData(
+                new()
+                {
+                    Name = "User",
+                    NormalizedName = "USER"
+                },
+                new()
+                {
+                    Name = "Administrator",
+                    NormalizedName = "ADMINISTRATOR"
+                }
+            );
         }
     }
 }

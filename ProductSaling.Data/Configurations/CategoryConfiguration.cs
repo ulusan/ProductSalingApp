@@ -8,7 +8,24 @@ namespace ProductSaling.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData(
+                new()
+                {
+                    CategoryId = 1,
+                    CategoryName = "Furniture",
+                },
+                new()
+                {
+                    CategoryId = 2,
+                    CategoryName = "Small Home Appliances",
+                },
+                new()
+                {
+                    CategoryId = 3,
+                    CategoryName = "Technological tools",
+                }
+            );
+            
         }
     }
 }

@@ -8,7 +8,32 @@ namespace ProductSaling.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData(
+                new()
+                {
+                    ProductId = 1,
+                    ProductName = "Süpürge",
+                    CategoryId = 2,
+                    UnitsInStock = 10,
+                    UnitPrice = 1000
+                },
+                new()
+                {
+                    ProductId =2,
+                    ProductName = "Masa",
+                    CategoryId = 1,
+                    UnitsInStock = 100,
+                    UnitPrice = 300
+                },
+                new()
+                {
+                    ProductId = 3,
+                    ProductName = "TV",
+                    CategoryId = 3,
+                    UnitsInStock = 5,
+                    UnitPrice = 15000
+                }
+            );
         }
     }
 }
