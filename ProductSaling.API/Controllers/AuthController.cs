@@ -3,7 +3,6 @@ using ProductSaling.Core.DTOs;
 using ProductSaling.Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using ProductSaling.Core.DTOs;
 using ProductSaling.Core.Services;
 using ProductSaling.Data;
 
