@@ -81,9 +81,9 @@ namespace ProductSaling.Core.Services
 
         public async Task<string> CreateRefreshToken()
         {
-            await _userManager.RemoveAuthenticationTokenAsync(_user, "HotelListingApi", "RefreshToken");
-            var newRefreshToken = await _userManager.GenerateUserTokenAsync(_user, "HotelListingApi", "RefreshToken");
-            var result = await _userManager.SetAuthenticationTokenAsync(_user, "HotelListingApi", "RefreshToken", newRefreshToken);
+            await _userManager.RemoveAuthenticationTokenAsync(_user, "ProductSalingAPI", "RefreshToken");
+            var newRefreshToken = await _userManager.GenerateUserTokenAsync(_user, "ProductSalingAPI", "RefreshToken");
+            var result = await _userManager.SetAuthenticationTokenAsync(_user, "ProductSalingAPI", "RefreshToken", newRefreshToken);
             return newRefreshToken;
         }
 
@@ -95,7 +95,7 @@ namespace ProductSaling.Core.Services
             _user = await _userManager.FindByNameAsync(username);
             try
             {
-                var isValid = await _userManager.VerifyUserTokenAsync(_user, "HotelListingApi", "RefreshToken", request.RefreshToken);
+                var isValid = await _userManager.VerifyUserTokenAsync(_user, "ProductSalingAPI", "RefreshToken", request.RefreshToken);
                 if (isValid)
                 {
                     return new TokenRequest { Token = await CreateToken(), RefreshToken = await CreateRefreshToken() };
