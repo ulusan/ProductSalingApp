@@ -5,6 +5,10 @@ using ProductSaling.Data.Entities;
 
 namespace ProductSaling.Data
 {
+    /// <summary>
+    /// The Asp.NET Core Identity library brings a database layout related
+    /// to the membership system it will integrate into the project.
+    /// </summary>
     public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
@@ -21,7 +25,6 @@ namespace ProductSaling.Data
             builder.ApplyConfiguration(new CustomerConfiguration());
             builder.ApplyConfiguration(new RoleConfiguration());
             builder.ApplyConfiguration(new ProductConfiguration());
-
         }
     }
 }
