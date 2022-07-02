@@ -1,4 +1,4 @@
-﻿using HotelListing.Core.Models;
+﻿using ProductSaling.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using ProductSaling.Core.IRepository;

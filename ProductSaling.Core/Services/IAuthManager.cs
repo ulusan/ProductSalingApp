@@ -1,5 +1,5 @@
-﻿using HotelListing.Core.DTOs;
-using HotelListing.Core.Models;
+﻿using ProductSaling.Core.DTOs;
+using ProductSaling.Core.Models;
 
 namespace ProductSaling.Core.Services
 {

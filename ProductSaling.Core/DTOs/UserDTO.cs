@@ -1,4 +1,4 @@
-﻿using HotelListing.Core.DTOs;
+﻿using ProductSaling.Core.DTOs;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProductSaling.Core.DTOs

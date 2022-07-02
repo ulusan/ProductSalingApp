@@ -9,9 +9,9 @@ namespace ProductSaling.Data
     /// The Asp.NET Core Identity library brings a database layout related
     /// to the membership system it will integrate into the project.
     /// </summary>
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApiUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
